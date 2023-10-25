@@ -1,0 +1,7 @@
+.container {
+    width: 85%;
+    text-align: center;
+    padding: 2rem;
+    margin: 0 auto;
+    border-top: 1px solid rgba(128, 128, 128, .5);
+}

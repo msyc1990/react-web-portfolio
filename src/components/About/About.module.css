@@ -1,0 +1,101 @@
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: 1150px) {
+        flex-direction: column;
+    }
+}
+
+.imageContainer {
+    flex: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    width: 370px;
+    height: auto;
+    filter: grayscale(95%);
+    --c: rgba(128, 128, 128, .3); /* the main color */
+    --b: 1px; /* thickness of the border */
+    --o: 25px; /* control the offset */
+    --_p: calc(2*var(--o) + var(--b));
+    padding: var(--_p) var(--_p) 0 0;
+    outline: var(--b) solid var(--c);
+    outline-offset: calc(var(--o) - var(--_p));
+}
+
+.borderImg {
+    padding: 1rem;
+    border-left: 1px solid rgba(14, 165, 233, .5);
+    border-bottom: 1px solid rgba(14, 165, 233, .5);
+}
+
+.contentContainer {
+    flex: 65%;
+    border-left: 1px solid rgba(128, 128, 128, .3);
+
+    @media only screen and (max-width: 1150px) {
+        border-left: none;
+        margin-top: 2rem;
+    }
+}
+
+.title {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(128, 128, 128, .3);
+}
+
+.contentText {
+    width: 75%;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    > p {
+        text-align: justify;
+        line-height: 1.6;
+    }
+}
+
+.techContainer {
+    width: 75%;
+    margin: 0 auto;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(14, 165, 233, .5);
+    border-right: 1px solid rgba(14, 165, 233, .5);
+
+    .techItem {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.2rem;
+    }
+}
+
+.quoteContainer {
+    width: max-content;
+    margin: 4rem auto;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: rgba(128, 128, 128, 0.45) 0px 25px 20px -20px;
+
+    > p {
+        padding: .5rem;
+    }
+
+    @media only screen and (max-width: 1150px) {
+
+        > p {
+            font-size: 2.5rem;
+        }
+    }
+}
